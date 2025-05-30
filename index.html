@@ -37,25 +37,71 @@
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('banner.png') no-repeat center top;
       background-size: cover;
       color: white;
-      padding: 6rem 2rem;
+      padding: 4rem 1.5rem 6rem 1.5rem;
       text-align: center;
       position: relative;
       animation: fadeIn 1.5s ease-in;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(-20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
     .title {
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      line-height: 1.1;
     }
     .title span { letter-spacing: -0.05em; }
     header p {
-      font-size: 1.25rem;
-      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      margin: 0.75rem 0;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+      max-width: 90%;
+    }
+    
+    /* Media queries para mobile */
+    @media (max-width: 768px) {
+      header {
+        padding: 3rem 1rem 5rem 1rem;
+        min-height: 80vh;
+      }
+      .title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+      header p {
+        font-size: 1rem;
+        margin: 1rem 0;
+        line-height: 1.5;
+      }
+      .logo-container {
+        position: static;
+        margin-top: 2rem;
+        max-width: 100%;
+        order: 3;
+      }
+      .logo-container img {
+        max-width: 280px;
+        opacity: 0.9;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.5rem;
+      }
+      header p {
+        font-size: 0.95rem;
+      }
+      .logo-container img {
+        max-width: 240px;
+      }
     }
     .btn {
       display: inline-block;
@@ -92,11 +138,21 @@
       color: #f9fafb;
     }
     section {
-      padding: 3rem 1.5rem;
+      padding: 2rem 1.5rem;
       max-width: 850px;
       margin: auto;
       background-color: var(--section-bg);
       transition: background-color 0.3s;
+    }
+    
+    @media (max-width: 768px) {
+      section {
+        padding: 1.5rem 1rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
     }
     h2 {
       color: #03b6d6;
@@ -125,7 +181,8 @@
     .logo-container {
       position: absolute;
       bottom: 1rem;
-      left: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
       max-width: 100%;
     }
     .logo-container img {
@@ -154,7 +211,7 @@
     margin: 2rem 0;
     }
     .bloco-centralizado img {
-    max-width: 700px;
+    max-width: 400px;
     height: auto;
     }
 
@@ -191,7 +248,7 @@
     <img src="organizacao.png" alt="Logos dos organizadores">
   </div>
   <p><i></i> Gerar impacto positivo na comunidade com tecnologia e propósito.</p>
-<p><strong><i class="fas fa-calendar-alt" style="color:#03b6d6"></i> 13 e 14 de Junho de 2025</strong> – PaqTcPB e UASC/UFCG</p>
+  <p><strong><i class="fas fa-calendar-alt"></i> 13 e 14 de Junho de 2025</strong> – PaqTcPB e UASC/UFCG</p>
   <a href="#inscricao" class="btn"><i class="fas fa-rocket"></i> Quero participar!</a>
 </header>
 <section>
@@ -240,7 +297,7 @@
     <li>Oportunidade de continuidade no projeto <strong>Agents4Good – Kunumi Lab/UFCG</strong></li>
   </ul>
 
-  <h2>📍 Programação Detalhada</h2>
+  <h2> Programação Detalhada</h2>
   <ul>
     <li><strong>13/06 – Auditório PaqTcPB</strong><br>
       18h – Abertura<strong> (Prof. Leandro Balby e Alberto Colares, CEO Kunumi)</strong><br>

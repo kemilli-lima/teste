@@ -186,7 +186,7 @@
       max-width: 100%;
     }
     .logo-container img {
-      max-width: 400px;
+      max-width: 300px;
       height: auto;
       opacity: 0.95;
     }
@@ -202,7 +202,7 @@
     margin: 1.5rem 0;
     }
     .imagem-centro img {
-    max-width: 700px;
+    max-width: 300px;
     height: auto;
     display: inline-block;
     }
@@ -211,7 +211,7 @@
     margin: 2rem 0;
     }
     .bloco-centralizado img {
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     }
 
@@ -219,27 +219,10 @@
   </style>
 </head>
 <body>
-<button class="toggle-theme" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
 
-<script>
-  // Tema
-  (function () {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.documentElement.dataset.theme = savedTheme;
-    }
-  })();
-  
-  function toggleTheme() {
-    const html = document.documentElement;
-    const newTheme = html.dataset.theme === "dark" ? "light" : "dark";
-    html.dataset.theme = newTheme;
-    localStorage.setItem("theme", newTheme);
-  }
-</script>
 
 <header>
-  <h1 class="title"> HACKATHON
+  <h1 class="title"> HACKATHON<br>
     <span style="color:#03b6d6">&lt;</span>
     <span>AGENTS</span><span style="color:#03b6d6">4</span><span>GOOD</span>
     <span style="color:#03b6d6">&gt;</span>
